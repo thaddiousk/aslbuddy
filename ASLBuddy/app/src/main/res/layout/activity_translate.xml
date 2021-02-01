@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TranslateActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/gameTop"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#E4572E"
+            android:fontFamily="@font/comicneuebold"
+            android:paddingTop="25dp"
+            android:text="ASL Buddy"
+            android:textAlignment="center"
+            android:textColor="#E5FFDE"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_nav_button"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:onClick="back"
+            android:padding="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/gameTop"
+            app:layout_constraintEnd_toEndOf="@+id/gameTop"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="@+id/gameTop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/abc_vector_test"
+            app:tint="#E5FFDE" />
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_nav_button"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:onClick="back"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/gameTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="@+id/gameTop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/home"
+            app:tint="#E5FFDE" />
+
+        <ImageView
+            android:id="@+id/micTranslate"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="268dp"
+            android:alpha="1"
+            android:background="@drawable/rounded_speech_button"
+            android:clickable="true"
+            android:onClick="translate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gameTop"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:clickable="true"
+            android:elevation="2dp"
+            android:onClick="translate"
+            app:layout_constraintBottom_toBottomOf="@+id/micTranslate"
+            app:layout_constraintEnd_toEndOf="@+id/micTranslate"
+            app:layout_constraintStart_toStartOf="@+id/micTranslate"
+            app:layout_constraintTop_toTopOf="@+id/micTranslate"
+            app:srcCompat="@drawable/mic" />
+
+        <EditText
+            android:id="@+id/textTranslate"
+            android:layout_width="261dp"
+            android:layout_height="149dp"
+            android:background="@drawable/text_button"
+            android:ems="10"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="Enter text to translate"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gameTop"
+            app:layout_constraintVertical_bias="0.132" />
+
+        <Button
+            android:id="@+id/translateRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_white_border"
+            android:fontFamily="@font/roboto_bold"
+            android:onClick="translateRequest"
+            android:text="Translate"
+            android:textColor="#E5FFDE"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/micTranslate"
+            app:layout_constraintVertical_bias="0.204" />
+
+        <HorizontalScrollView
+            android:id="@+id/translationScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:addStatesFromChildren="false"
+            android:alpha="0"
+            android:background="@drawable/rounded_nav_button"
+            android:clickable="false"
+            android:elevation="0dp"
+            android:fadeScrollbars="false"
+            android:isScrollContainer="true"
+            android:nestedScrollingEnabled="false"
+            android:paddingBottom="0dp"
+            android:scrollIndicators="bottom"
+            android:scrollbarDefaultDelayBeforeFade="1000"
+            android:scrollbarFadeDuration="1000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTranslate">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/showTranslation"
+                android:layout_width="wrap_content"
+                android:layout_height="166dp"
+                android:alpha="1"
+                android:elevation="20dp"
+                android:isScrollContainer="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+                app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="@+id/scrollView2"></androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/closeTranslationBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:alpha="0"
+            android:background="@drawable/rounded_red_button"
+            android:clickable="false"
+            android:fontFamily="@font/roboto_bold"
+            android:onClick="hideTranslation"
+            android:padding="0dp"
+            android:text="X"
+            android:textColor="#E5FFDE"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/translateRequest" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

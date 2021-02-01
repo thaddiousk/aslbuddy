@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#d4471c</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="correctAnswerCol">#73FF31</color>
+    <color name="wrongAnswerCol">#E4572E</color>
+    <color name="selectAnswerCol">#FFFFFF</color>
+</resources>
